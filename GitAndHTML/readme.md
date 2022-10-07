@@ -5,3 +5,4 @@
 + Sử dụng được các lệnh Git cơ bản
 + Trình bày được cấu trúc cơ bản của một tài liệu web
 + Sử dụng được các thẻ HTML cơ bản
++ Khoa thêm dòng nữa
