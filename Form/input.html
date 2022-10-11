@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Types</title>
+</head>
+<body>
+    <form action="#">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Languages</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">English</option>
+                            <option value="">Thailand</option>
+                            <option value="">Korean</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduction</td>
+                    <td>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Logo</td>
+                    <td>
+                        <input style="width:50px" type="image" src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonas-kakaroto-736230.jpg&fm=jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td>
+                        <input type="range" min="14" max="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>My Color</td>
+                    <td>
+                        <input type="color">
+                        <input type="hidden" name="code" value="CGH">
+                    </td>
+                </tr>
+                <tr>
+                    <td>DoB</td>
+                    <td>
+                        <input type="date" min="2022-01-01" max="2022-12-31">
+                        <input type="time">
+                        <br>
+                        <input type="datetime-local">
+                        <br>
+                        <input type="week">
+                        <br>
+                        <input type="month">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" checked> Male
+                        <input type="radio" name="gender"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox"> Football
+                        <input type="checkbox" checked> Swimming
+                        <input type="checkbox"> Walking
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        <input type="number" min="0" max="10" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>
+                        <input type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Keyword</td>
+                    <td>
+                        <input type="search" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td>
+                        <input type="tel" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Link Facebook</td>
+                    <td>
+                        <input type="url" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Avatar</td>
+                    <td>
+                        <input type="file" accept="image/*" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <!-- <button type="submit">Register</button>
+                        <button type="reset">Cancel</button>
+                        <button type="button" onclick="alert('Hello anh em!')">Say Hello</button> -->
+                        <input type="submit" value="Đăng Ký">
+                        <input type="reset" value="Hủy">
+                        <input type="button" value="Xin chào" onclick="alert('Xin chào anh em!')">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
