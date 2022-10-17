@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <style>
+        table{
+            width: 400px;
+        }
+        img{
+            width: 100%;
+            height: 90px;
+        }
+
+        .completed>tbody>tr>td{
+            border: 4px solid red;
+            box-shadow: 2px 2px 2px rgb(236, 115, 115);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td><img src="images/2.1.jpg" id="photo_1" onclick="changePhoto(1)" alt=""></td>
+            </tr>
+            <tr>
+                <td><img src="images/3.2.jpg" id="photo_2" onclick="changePhoto(2)" alt=""></td>
+            </tr>
+            <tr>
+                <td><img src="images/1.3.jpg" id="photo_3" onclick="changePhoto(3)" alt=""></td>
+            </tr>
+            <tr>
+                <td><img src="images/3.4.jpg" id="photo_4" onclick="changePhoto(4)" alt=""></td>
+            </tr>
+            <tr>
+                <td><img src="images/2.5.jpg" id="photo_5" onclick="changePhoto(5)" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const win_1 = `http://127.0.0.1:5500/images/1.1.jpghttp://127.0.0.1:5500/images/1.2.jpghttp://127.0.0.1:5500/images/1.3.jpghttp://127.0.0.1:5500/images/1.4.jpghttp://127.0.0.1:5500/images/1.5.jpg`
+        const win_2 = `http://127.0.0.1:5500/images/2.1.jpghttp://127.0.0.1:5500/images/2.2.jpghttp://127.0.0.1:5500/images/2.3.jpghttp://127.0.0.1:5500/images/2.4.jpghttp://127.0.0.1:5500/images/2.5.jpg`
+        const win_3 = `http://127.0.0.1:5500/images/3.1.jpghttp://127.0.0.1:5500/images/3.2.jpghttp://127.0.0.1:5500/images/3.3.jpghttp://127.0.0.1:5500/images/3.4.jpghttp://127.0.0.1:5500/images/3.5.jpg`
+        function changePhoto(row){
+            let current_photo = document.getElementById(`photo_${row}`);
+            let photo_number = Math.ceil(Math.random()*3);
+            let filename = `${photo_number}.${row}.jpg`;
+            current_photo.src = `images/${filename}`;
+
+            let photo_1 = document.getElementById('photo_1').src;
+            let photo_2 = document.getElementById('photo_2').src;
+            let photo_3 = document.getElementById('photo_3').src;
+            let photo_4 = document.getElementById('photo_4').src;
+            let photo_5 = document.getElementById('photo_5').src;
+
+            let check = photo_1 + photo_2 + photo_3 + photo_4 + photo_5;
+            if(check === win_1 || check === win_2 || check === win_3){
+                document.getElementsByTagName('table')[0].classList.add('completed')
+            }
+            else{
+                document.getElementsByTagName('table')[0].classList.remove('completed')
+            }
+        }
+    </script>
+</body>
+</html>
