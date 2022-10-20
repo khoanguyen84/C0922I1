@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Statement</title>
+</head>
+
+<body>
+    <script>
+        // let number = Number(prompt('enter number: '));
+
+        // while(Number.isNaN(number) || number < 0 || number > 10){
+        //     number = Number(prompt('enter number: '));
+        // }
+
+        // let number = 0;
+        // do{
+        //     number = Number(prompt('enter number: '));
+        // }
+        // while(Number.isNaN(number) || number < 0 || number > 10)
+
+        let number = Number(prompt('enter number: '));
+        for (; Number.isNaN(number) || number < 0 || number > 10;) {
+            number = Number(prompt('enter number: '));
+        }
+
+        document.write(number)
+    </script>
+    <!-- <script src="for.js"></script> -->
+</body>
+
+</html>
