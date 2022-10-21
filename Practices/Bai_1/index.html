@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: Tính S(n) = 1 + 2 + 3 + … + n</title>
+</head>
+<body>
+    <a href="../index.html">Back to menu</a>
+
+    <table>
+        <caption>Bài 1: Tính S(n) = 1 + 2 + 3 + … + n</caption>
+        <tbody>
+            <tr>
+                <td>Number</td>
+                <td>
+                    <input type="number" id="number" value="10" placeholder="Enter number ...">
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="number" id="result" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="process()">Process</button>
+                    <!-- <button onclick="process(event)">Process</button> -->
+                    <!-- <button id="btnProcess">Process</button> -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <script>
+        function process(){
+            let number = Number(document.querySelector('#number').value);
+            let result = document.querySelector('#result');
+
+            let total = 0;
+            for(let i = 1; i <= number; i++){
+                total += i;
+            }
+
+            result.value = total;
+        }
+
+        // document.querySelector('#btnProcess').addEventListener("click", function(e){
+        //     console.log(e);
+        // })
+
+        // document.querySelector('#btnProcess').onclick = function(e){
+        //     console.log(e);
+        // }
+    </script>
+</body>
+</html>
