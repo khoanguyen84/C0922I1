@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <input type="number" id="size">
+    <button onclick="enroll()">Enroll</button>
+    <ol id="students">
+
+    </ol>
+
+    <script>
+        function enroll() {
+            let size = Number(document.querySelector('#size').value);
+            let students = new Array(size);
+            for (let i = 0; i < students.length; i++) {
+                students[i] = prompt(`Enter student name ${i + 1}: `);
+            }
+
+            let print = "";
+            for(let i = 0; i < students.length; i++){
+                print += `<li>${students[i]}</li>`
+            }
+
+            document.querySelector('#students').innerHTML = print;
+        }
+    </script>
+</body>
+
+</html>
