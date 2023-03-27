@@ -1,0 +1,1 @@
+export const gifts = ["Laptop", "iPhone 14", "Macbook", "Oppo"];
