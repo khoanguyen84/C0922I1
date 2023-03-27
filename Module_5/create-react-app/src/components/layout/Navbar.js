@@ -6,6 +6,7 @@ function Navbar(){
         <div>
             <Link to={"/useState"}>UseState </Link>| 
             <Link to={"/useEffect"}> UseEffect</Link>
+            <Link to={"/login"}> Login</Link>
         </div>
     )
 }
