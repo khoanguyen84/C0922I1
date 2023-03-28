@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+span{
+  color: red;
+  font-weight: bolder;
+}
+
+span:hover{
+  cursor: pointer;
+  color: red;
+  font-weight: bolder;
+}
