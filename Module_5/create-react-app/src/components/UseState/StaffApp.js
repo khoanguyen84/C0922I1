@@ -1,14 +1,34 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+// import * as Khoa from "react";
+const key = "staff_db";
 function StaffApp() {
-    const [staffs, setStaffs] = useState([])
+    const [staffs, setStaffs] = useState(() => {
+        let array = [];
+        if (window.localStorage.getItem(key) == null) {
+            array = ["Khoa", "Phước"];
+            window.localStorage.setItem(key, JSON.stringify(array));
+        }
+        else {
+            array = JSON.parse(window.localStorage.getItem(key))
+        }
+        return array;
+    })
     const [staff, setStaff] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setStaffs([
-            ...staffs,
-            staff
-        ])
+        // setStaffs([
+        //     ...staffs,
+        //     staff
+        // ]);
+        // window.localStorage.setItem(key, JSON.stringify(staffs));
+
+        setStaffs(() => {
+            let newStaffs = [...staffs, staff];
+            window.localStorage.setItem(key, JSON.stringify(newStaffs));
+            return newStaffs;
+        })
         setStaff("")
     }
 
@@ -41,8 +61,11 @@ function StaffApp() {
                         <ul>
                             {
                                 staffs.map((item, index) => {
-                                    return <li key={index}>{item}
-                                        <span span title="remove staff" onClick={() => removeStaff(index)}>&times;</span>
+                                    return <li key={index}>
+                                        <div>
+                                            <Link to={`staff-detail/${item}/${index}`}>{item}</Link>
+                                            <span span title="remove staff" onClick={() => removeStaff(index)}>&times;</span>
+                                        </div>
                                     </li>
                                 })
                             }

@@ -9,6 +9,8 @@ function Navbar(){
             <Link to={"/login"}> Login</Link>
             <Link to={"/two-way-binding"}> Two Way Binding</Link>
             <Link to={"/staff-app"}> Staff App</Link>
+            <Link to={"/staff-app-api"}> Staff App API</Link>
+            <Link to={"/bill"}> Bill</Link>
         </div>
     )
 }
